@@ -1,6 +1,5 @@
 click==8.0.4
 colorama==0.4.4
-dataclasses==0.8
 et-xmlfile==1.1.0
 Flask==2.0.3
 imbalanced-learn==0.8.0
