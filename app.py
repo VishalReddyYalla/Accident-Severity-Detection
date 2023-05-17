@@ -190,6 +190,6 @@ def prediction():
 
 
 if __name__=='__main__':
-    webapp.run(debug=True)
+    webapp.run(debug=False,host='0.0.0.0')
 #,host='0.0.0.0'
   
