@@ -49,25 +49,20 @@ def preprocess():
         df['Casualty Class'] = le.fit_transform(df['Casualty Class'])
         df['Sex of Casualty'] = le.fit_transform(df['Sex of Casualty'])
         df['Type of Vehicle'] = le.fit_transform(df['Type of Vehicle'])
-        df['Reference Number'] = le.fit_transform(df['Reference Number'])
-        df['Easting'] = le.fit_transform(df['Easting'])
-        df['Northing'] = le.fit_transform(df['Northing'])
-        df['Number of Vehicles'] = le.fit_transform(df['Number of Vehicles'])
-        df['Accident Date'] = le.fit_transform(df['Accident Date'])
-        df['Time (24hr)'] = le.fit_transform(df['Time (24hr)'])
         df['1st Road Class'] = le.fit_transform(df['1st Road Class'])
         df['Age of Casuality'] = le.fit_transform(df['Age of Casuality'])
         df['Casualty Severity'] = le.fit_transform(df['Casualty Severity'])
         print(df.head())
-        df.to_csv('cleaned.csv')
+        #df.to_csv('cleaned.csv')
         from imblearn.over_sampling import (SMOTE, RandomOverSampler)
         oversampled = SMOTE()
         X = df.iloc[:,:-1]
         y = df.iloc[:,-1]
 
-        X = pd.DataFrame(X, columns=['Number of Vehicles', 'Time (24hr)', '1st Road Class','Road Surface',
-       'Lighting Conditions', 'Weather Conditions', 'Casualty Class',
-       'Sex of Casualty', 'Age of Casuality', 'Speed', 'Type of Vehicle'])
+        X = pd.DataFrame(X, columns=['Lighting Conditions','Road Surface','Weather Conditions'
+                                     ,'Casualty Class','Sex of Casualty','Type of Vehicle'
+                                     ,'Speed','Number of Vehicles','Age of Casuality','Time (24hr)'
+                                     ,'1st Road Class'])
         y = pd.DataFrame(y, columns=['Casualty Severity'])
         X, y = oversampled.fit_resample(X, y)
 
@@ -161,11 +156,23 @@ def prediction():
             f10= int(request.form['Time (24hr)'])
             f11= int(request.form['1st Road Class'])
             le = LabelEncoder()
-            li=le.fit_transform([f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11])
+            print(f1)
+            print(f2)
+            print(f3)
+            print(f4)
+            print(f5)
+            print(f6)
+            print(f7)
+            print(f8)
+            print(f9)
+            print(f10)
+            print(f11)
+            li=([f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11])
+
 
             print(li)
             print("dfsfkhkfhksfhksfh")
-            model=RandomForestClassifier()
+            model= RandomForestClassifier(n_estimators=300, random_state=35)
             model.fit(X_train,y_train)
             result=model.predict([li])
             print(result)
@@ -183,6 +190,6 @@ def prediction():
 
 
 if __name__=='__main__':
-    webapp.run(debug=False,host='0.0.0.0')
+    webapp.run(debug=True)
 #,host='0.0.0.0'
   
