@@ -95,58 +95,57 @@
 								<center>
 									<select name="LightingConditions" style="width:187px; height:33.39px;border-left-width: 1px;margin-left: 0px;">
 										<option value="-1">Select Lighting Conditions</option>
-										<option value="0">Darkness: street lighting unknown</option>
-										<option value=1>Daylight: street lights present</option>
+										<option value="1">Darkness: street lighting unknown</option>
+										<option value=4>Daylight: street lights present</option>
 										<option value=2>Darkness: street lights present and lit</option>
 										<option value=3>Darkness: street lights present but unlit</option>
-										<option value=4>Darkness: no street lighting</option>
+										<option value=0>Darkness: no street lighting</option>
 									</select>
 
 									<select name="RoadSurface" style="width:187px; height:33.39px;">
 										<option value="-1">Select Road Surface:</option>
 										<option value=9>Road Surface</option>
-										<option value=0>WetDamp</option>
+										<option value=3>WetDamp</option>
 										<option value=1>Dry</option>
 										<option value=2>FrostIce</option>
 									</select>
 									<select name="WeatherConditions" style="width:187px; height:33.39px;">
 										<option value=-1> Select Weather Conditions</option>
-										<option value=0>Raining without high winds</option>
+										<option value=5>Raining without high winds</option>
 										<option value=1>Fine without high winds</option>
-										<option value=2>Fine with high winds</option>
-										<option value=3>Unknown</option>
+										<option value=0>Fine with high winds</option>
 										<option value=4>Raining with high winds</option>
-										<option value=5>Other</option>
-										<option value=6>Fog or mist – if hazard</option>
+										<option value=3>Other</option>
+										<option value=2>Fog or mist – if hazard</option>
 									</select>
 									<select name="CasualtyClass" style="width:187px; height:33.39px;">
 										<option value=-1>Select Casualty Class</option>
 										<option value=0>Driver</option>
-										<option value=1>Pedestrian</option>
-										<option value=2>Passenger</option>
+										<option value=2>Pedestrian</option>
+										<option value=1>Passenger</option>
 									</select>
 									<select name="SexofCasualty" style="width:187px; height:33.39px;">
 										<option value=-1> Select Sex of Casualty</option>
-										<option value=0>Male</option>
-										<option value=1>Female</option>
+										<option value=1>Male</option>
+										<option value=0>Female</option>
 									</select>
 									<select name="TypeofVehicle" style="width:187px; height:33.39px;">
 										<option value=-1> Select Type of Vehicle</option>
-										<option value=0>Car</option>
-										<option value=1>Goods vehicle 3.5 tonnes mgw and under</option>
-										<option value=2>Pedal cycle</option>
-										<option value=3>Bus or coach (17 or more passenger seats)</option>
-										<option value=4>Minibus (8 – 16 passenger seats)</option>
-										<option value=5>Motorcycle over 500cc</option>
-										<option value=6>Taxi/Private hire car</option>
-										<option value=7>Motorcycle over 125cc and up to 500cc</option>
-										<option value=8>Motorcycle over 50cc and up to 125cc</option>
-										<option value=9>Goods vehicle over 3.5 tonnes and under 7.5 tonnes mgw</option>
-										<option value=10>Other Vehicle</option>
-										<option value=11>Goods vehicle 7.5 tonnes mgw and over</option>
-										<option value=12>M/cycle 50cc and under</option>
+										<option value=2>Car</option>
+										<option value=3>Goods vehicle 3.5 tonnes mgw and under</option>
+										<option value=12>Pedal cycle</option>
+										<option value=1>Bus or coach (17 or more passenger seats)</option>
+										<option value=7>Minibus (8 – 16 passenger seats)</option>
+										<option value=9>Motorcycle over 500cc</option>
+										<option value=14>Taxi/Private hire car</option>
+										<option value=8>Motorcycle over 125cc and up to 500cc</option>
+										<option value=10>Motorcycle over 50cc and up to 125cc</option>
+										<option value=5>Goods vehicle over 3.5 tonnes and under 7.5 tonnes mgw</option>
+										<option value=11>Other Vehicle</option>
+										<option value=4>Goods vehicle 7.5 tonnes mgw and over</option>
+										<option value=6>M/cycle 50cc and under</option>
 										<option value=13>Ridden horse</option>
-										<option value=14>Agricultural vehicle (includes diggers etc.)</option>
+										<option value=0>Agricultural vehicle (includes diggers etc.)</option>
 									</select>
 
 									<input type="text" name="speed" placeholder="Enter speed">
@@ -155,39 +154,39 @@
 
 									<select name="Time (24hr)" style="width:187px; height:33.39px;">
 										<option value=-1> Select the accident time in hours format</option>
-										<option value=0>1</option>
-										<option value=1>2</option>
-										<option value=2>3</option>
-										<option value=3>4</option>
-										<option value=4>5</option>
-										<option value=5>6</option>
-										<option value=6>7</option>
-										<option value=7>8</option>
-										<option value=8>9</option>
-										<option value=9>10</option>
-										<option value=10>11</option>
-										<option value=11>12</option>
-										<option value=12>13</option>
-										<option value=13>14</option>
-										<option value=14>15</option>
-										<option value=15>16</option>
-										<option value=16>17</option>
-										<option value=17>18</option>
-										<option value=18>19</option>
-										<option value=19>20</option>
-										<option value=20>21</option>
-										<option value=21>22</option>
-										<option value=22>23</option>
-										<option value=23>24</option>
+										<option value=1>1</option>
+										<option value=2>2</option>
+										<option value=3>3</option>
+										<option value=4>4</option>
+										<option value=5>5</option>
+										<option value=6>6</option>
+										<option value=7>7</option>
+										<option value=8>8</option>
+										<option value=9>9</option>
+										<option value=10>10</option>
+										<option value=11>11</option>
+										<option value=12>12</option>
+										<option value=13>13</option>
+										<option value=14>14</option>
+										<option value=15>15</option>
+										<option value=16>16</option>
+										<option value=17>17</option>
+										<option value=18>18</option>
+										<option value=19>19</option>
+										<option value=20>20</option>
+										<option value=21>21</option>
+										<option value=22>22</option>
+										<option value=23>23</option>
+										<option value=24>24</option>
 									</select>
 
 									<select name="1st Road Class" style="width:187px; height:33.39px;">
 										<option value=-1> Please select the road class </option>
-										<option value=0>Unclassified</option>
-										<option value=1>A</option>
-										<option value=2>Motorway</option>
-										<option value=3>B</option>
-										<option value=3>A(M)</option>
+										<option value=4>Unclassified</option>
+										<option value=0>A</option>
+										<option value=3>Motorway</option>
+										<option value=2>B</option>
+										<option value=1>A(M)</option>
 									</select>
 
 									<input type="submit" value="Submit">
